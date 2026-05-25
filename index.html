@@ -162,6 +162,59 @@
   footer { text-align: center; padding: 40px 0 60px; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); }
   footer .wordmark { font-size: 1.05rem; margin-bottom: 8px; }
 
+  /* SPOTLIGHT */
+  .spotlight {
+    position: relative;
+    margin: 50px 0 10px;
+    padding: 40px 32px 36px;
+    border-radius: 22px;
+    background: var(--surface);
+    background-image: radial-gradient(circle at 50% 0%, rgba(201,151,58,0.16), transparent 62%);
+    border: 1.5px solid rgba(201,151,58,0.55);
+    box-shadow: 0 0 0 1px rgba(201,151,58,0.18), 0 24px 80px rgba(201,151,58,0.14), 0 30px 70px rgba(0,0,0,0.6);
+    text-align: center;
+  }
+  .spotlight .eyebrow { font-size: 0.74rem; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase; color: var(--gold-flat); }
+  .spotlight h2 { font-size: clamp(1.5rem, 4vw, 2.1rem); font-weight: 800; margin-top: 12px; line-height: 1.18; }
+  .spotlight .spot-sub { color: var(--muted); font-size: 1.06rem; max-width: 600px; margin: 14px auto 26px; }
+  .live-badge {
+    display: inline-flex; align-items: center; gap: 8px; margin-bottom: 22px;
+    font-size: 0.72rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+    color: #7CF2A0; border: 1px solid rgba(124,242,160,0.45); border-radius: 30px; padding: 6px 14px;
+    background: rgba(124,242,160,0.06);
+  }
+  .live-dot {
+    width: 9px; height: 9px; border-radius: 50%; background: #2EE36B; box-shadow: 0 0 0 0 rgba(46,227,107,0.6);
+    animation: livePulse 1.8s ease-out infinite;
+  }
+  @keyframes livePulse {
+    0% { box-shadow: 0 0 0 0 rgba(46,227,107,0.55); }
+    70% { box-shadow: 0 0 0 9px rgba(46,227,107,0); }
+    100% { box-shadow: 0 0 0 0 rgba(46,227,107,0); }
+  }
+  .browser {
+    max-width: 880px; margin: 0 auto 30px; border-radius: 14px; overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.14); background: #15151b;
+    box-shadow: 0 18px 50px rgba(0,0,0,0.55);
+  }
+  .browser-bar {
+    display: flex; align-items: center; gap: 12px; padding: 11px 14px;
+    background: #1d1d24; border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .browser-dots { display: flex; gap: 7px; flex-shrink: 0; }
+  .browser-dots span { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+  .browser-dots span:nth-child(1) { background: #ff5f57; }
+  .browser-dots span:nth-child(2) { background: #febc2e; }
+  .browser-dots span:nth-child(3) { background: #28c840; }
+  .browser-url {
+    flex: 1; text-align: center; font-size: 0.78rem; color: #B6B6C0;
+    background: #0d0d12; border-radius: 8px; padding: 6px 14px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  }
+  .browser-frame { width: 100%; }
+  .browser-frame iframe { display: block; }
+
   /* REVEAL */
   .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .reveal.in { opacity: 1; transform: translateY(0); }
@@ -172,6 +225,8 @@
     .nav-cta { display: none; }
     header.hero { padding: 64px 0 50px; }
     .brand-block { font-size: 1.4rem; }
+    .spotlight { padding: 30px 18px 28px; }
+    .browser-frame iframe { height: 360px !important; }
   }
 </style>
 </head>
@@ -198,6 +253,23 @@
 </header>
 
 <div class="wrap">
+
+  <div class="spotlight reveal">
+    <span class="live-badge"><span class="live-dot"></span>Live</span>
+    <div class="eyebrow">The Centerpiece</div>
+    <h2>I built you a live sales page for The Profit Accelerator Mastermind.</h2>
+    <p class="spot-sub">Your new high-ticket offer, fully designed and live right now. This is the actual page.</p>
+    <div class="browser">
+      <div class="browser-bar">
+        <div class="browser-dots"><span></span><span></span><span></span></div>
+        <div class="browser-url">andrei170.github.io/paul-jamison-landing</div>
+      </div>
+      <div class="browser-frame">
+        <iframe src="https://andrei170.github.io/paul-jamison-landing/" loading="lazy" title="Live sales page preview" style="width:100%;height:520px;border:0;background:#fff;"></iframe>
+      </div>
+    </div>
+    <a href="https://andrei170.github.io/paul-jamison-landing/" class="btn-link" target="_blank" rel="noopener">Open the full sales page</a>
+  </div>
 
   <div class="stats reveal">
     <div class="stat"><div class="num"><span data-count="6">0</span>+</div><div class="label">Hours of Research</div></div>
