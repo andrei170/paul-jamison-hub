@@ -229,6 +229,23 @@
   .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .reveal.in { opacity: 1; transform: translateY(0); }
 
+  .model-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .model{background:rgba(10,10,15,0.7);border:1px solid var(--border);border-radius:14px;padding:24px 22px;}
+  .model .ic{color:var(--gold-flat);font-weight:800;font-size:0.74rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;display:block;}
+  .model h4{font-size:1rem;font-weight:800;margin-bottom:8px;color:var(--white);}
+  .model p{color:var(--muted);font-size:0.92rem;margin:0;}
+  .scarcity{text-align:center;color:var(--gold-flat);font-weight:700;font-size:0.95rem;margin:28px auto 0;max-width:620px;}
+  .hub-faq{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:14px;}
+  .hub-faq .qa{background:rgba(10,10,15,0.6);border:1px solid var(--border);border-radius:12px;padding:20px 22px;}
+  .hub-faq .qa h4{font-size:1rem;font-weight:800;color:var(--white);margin-bottom:6px;}
+  .hub-faq .qa p{color:var(--muted);font-size:0.93rem;margin:0;}
+  .sticky-cta{display:none;}
+  @media (max-width:720px){
+    .model-grid{grid-template-columns:1fr;}
+    body{padding-bottom:74px;}
+    .sticky-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(0,0,0,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--border);padding:12px 16px;}
+    .sticky-cta a{display:block;width:100%;text-align:center;color:var(--black);background:linear-gradient(135deg,var(--gold-1),var(--gold-2));font-weight:700;padding:14px;border-radius:40px;text-decoration:none;font-size:0.95rem;}
+  }
   @media (max-width: 720px) {
     .stats { grid-template-columns: 1fr; gap: 24px; padding: 30px 18px; }
     .process-grid { grid-template-columns: 1fr; }
@@ -422,15 +439,42 @@
     <div class="proc reveal"><div class="step">STEP 04</div><h4>You Coach, We Run the Machine</h4><p>You do what you do best on the calls. Everything behind it keeps running without you touching it.</p></div>
   </div>
 
+  <!-- HOW WE'D WORK -->
+  <div class="sec-head reveal">
+    <div class="eyebrow">How We'd Work</div>
+    <h2>Simple Terms. Skin In The Game.</h2>
+  </div>
+  <div class="model-grid">
+    <div class="model reveal"><span class="ic">The model</span><h4>A setup fee, then revenue share</h4><p>A one-time build fee to stand it all up, then a share of the new revenue it generates. I only win when you win.</p></div>
+    <div class="model reveal"><span class="ic">One operator</span><h4>You deal with me, not a team</h4><p>I build and run the whole machine myself with AI leverage. One point of contact, fast turnaround, nothing lost in handoffs.</p></div>
+    <div class="model reveal"><span class="ic">Proven</span><h4>Over $1M generated, solo</h4><p>I built a full monetization system from zero for a creator with 180K followers: offer, funnel, email, and community, in weeks.</p></div>
+  </div>
+  <p class="scarcity reveal">I only take on a handful of clients at a time, so I can stay hands-on with every build.</p>
+
+  <!-- HUB FAQ -->
+  <div class="sec-head reveal">
+    <div class="eyebrow">Straight Answers</div>
+    <h2>What You're Probably Wondering</h2>
+  </div>
+  <div class="hub-faq">
+    <div class="qa reveal"><h4>How much does this cost?</h4><p>A setup fee plus revenue share, scoped to what we build. We talk real numbers on the call, once I understand your business. No retainer, no surprises.</p></div>
+    <div class="qa reveal"><h4>How fast can you build it?</h4><p>Fast. These pages were built before we ever spoke. A full funnel is usually live in a few weeks, not months.</p></div>
+    <div class="qa reveal"><h4>What do you need from me?</h4><p>Your offer and your voice. I handle the building, the tech, and the copy. You stay focused on serving your clients.</p></div>
+    <div class="qa reveal"><h4>Why revenue share?</h4><p>Because it aligns us. I do not earn the upside unless the system actually makes you money. My incentive is your result.</p></div>
+  </div>
+
   <!-- CTA -->
   <div class="cta-box reveal">
     <h2>Ready to build this for real?</h2>
     <p>Everything above was built specifically for you, Paul. Imagine what we'd do with full access to your audience.</p>
     <a href="https://calendly.com/ag-copy/call-with-andrei" class="btn-link" target="_blank" rel="noopener">Book a call with Andrei</a>
-    <p style="color:var(--gold-flat);font-weight:700;font-size:0.9rem;margin:18px 0 0;letter-spacing:.02em;">Over $1M in client revenue generated. One operator.</p>
+    <p style="color:var(--muted);font-size:0.92rem;margin:14px 0 0;">Not ready for a call? Just reply and tell me what you think.</p>
+    <p style="color:var(--gold-flat);font-weight:700;font-size:0.9rem;margin:14px 0 0;letter-spacing:.02em;">Over $1M in client revenue generated. One operator.</p>
   </div>
 
 </div>
+
+<div class="sticky-cta"><a href="https://calendly.com/ag-copy/call-with-andrei">Book a call with Andrei</a></div>
 
 <footer>
   <div class="wordmark"><span class="ag gold-text">AG1</span> <span class="co">CONSULTING</span></div>
